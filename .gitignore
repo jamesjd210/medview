@@ -6,4 +6,6 @@ pyvenv.cfg
 
 src/__pycache__/
 test/__pycache__/
+__pycache__/
+.pytest_cache/
 
