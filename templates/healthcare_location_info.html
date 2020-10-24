@@ -1,0 +1,7 @@
+{{ name }}:
+{{ type }}
+
+Supported Health Insurance Providers:
+{% for provider in providers %}
+    -{{provider}}
+{% endfor %}
