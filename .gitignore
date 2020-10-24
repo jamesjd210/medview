@@ -3,5 +3,7 @@ bin/
 pyvenv.cfg
 
 .vscode/
-python-docs-samples/
+
+src/__pycache__/
+test/__pycache__/
 
