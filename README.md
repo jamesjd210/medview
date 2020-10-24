@@ -7,4 +7,6 @@
  - `virtualenv .`
  - `source bin/activate`
  - `./installdeps`
+ - Run server locally: `python3 main.py`
+ - Run tests: `pytest`
 
