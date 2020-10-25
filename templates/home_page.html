@@ -16,6 +16,10 @@
       {% for health_insurance in health_insurance %}
       <option value= "{{health_insurance}}" SELECTED>{{health_insurance}}</option>"
       {% endfor %}
+    <select name= health_institution method="GET" action="/">
+        {% for health_institution in health_institution %}
+        <option value= "{{health_institution}}" SELECTED>{{health_institution}}</option>"
+        {% endfor %}
     </select>
     <!-- Map --->
     <div id="map"></div>
