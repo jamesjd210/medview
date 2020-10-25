@@ -17,7 +17,7 @@
       <input type="Go!">
     </form>
     <select name= health_institution method="GET" action="/">
-        {% for institution in health_institution %}
+        {% for health_institution in health_institution %}
         <option value= "{{health_institution}}" SELECTED>{{health_institution}}</option>
         {% endfor %}
     </select>
