@@ -6,119 +6,191 @@
     <link rel="icon" href="../static/images/Medview_logo.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" type="text/css" href="../static/css/styles_homepage.css"/>
-    <h2>MedView</h2>
-    <style>
-      .btn {
-        border: none;
-        background-color: inherit;
-        padding: 14px 28px;
-        font-size: 16px;
-        cursor: pointer;
-        display: inline-block;
-      }
-      .btn:hover {background: #eee;}
-      .colored {color: green;}
-    </style>
   <!-- BODY -->
   <body id="body">
-    <a href="about_page.html"><button style="font-family: 'Montserrat'" class="btn back">About</button></a>
+    
+
+    <div class="button-section fade-in2">
+        <div class="row">
+
+            <div class="column3 fade-in5">
+            </div>
+
+            <div class="column3 fade-in5">
+                <a href=about_page><button style="font-family: 'Montserrat'" class="btn about">About</button></a>
+            </div>
+            
+            <div class="column3 fade-in5">
+            </div>
+
+        </div>
+    </div>
+
+
     <!-- Drop down entry field-->
     <div class="name-section fade-in2">
+        <div class="under">
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+        </div>
+
       <div class="row">
 
-        <h1 style="font-family: 'Montserrat';text-align:center;color: white">The Team</h1>
-        <div class="column fade-in">
-            <div class="slot">
+        
+        <div class="column1 fade-in">
+            <div class="slotBig">
                 <div class="container">
-                    <h2 style="font-family: 'Montserrat'">Zachary Siegel</h2>
-                    <p style="font-family: 'Montserrat'">siegelzc@utexas.edu</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="column fade-in2">
-            <div class="slot">
-                <div class="container">
-                    <h2 style="font-family: 'Montserrat'">James Dong</h2>
-                    <p style="font-family: 'Montserrat'">jamesjd210@utexas.edu</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="column fade-in3">
-            <div class="slot">
-                <div class="container">
-                    <h2 style="font-family: 'Montserrat'">Ashray Desai</h2>
-                    <p style="font-family: 'Montserrat'">ashraydesai@utexas.edu</p>
+                    <img src="../static/images/Medview_logo_var2.png" style="width: 30vw; min-width: 50px;">
+                    <p style="font-family: 'Montserrat'; color: white; font-size: 18px;">Welcome to MedView! MedView will show you nearby healthcare institutions based on your provider and display basic info such as their supported insurances and price estimates.</p>
+                    <p style="font-family: 'Montserrat'; color: white; font-size: 18px;">Select your health insurance provider and the type of health care service needed from the drop down menus below to get started.</p>
+                    <p style="font-family: 'Montserrat'; color: white"></p>
                 </div>
             </div>
         </div>
 
     </div>
-</div>
-    <div class="row">
-      <h1 style="font-family: 'Montserrat';text-align:center;color: white">Find Nearby Locations</h1>
-      <div class="column fade-in">
-          <div class="slot">
-              <div class="container">
-                <select name= health_institutions method="GET" action="/">
-                  {% for institution in health_institutions %}
-                  <option value= "{{health_institutions}}" SELECTED>{{institution}}</option>
-                  {% endfor %}
-              </select>
-              </div>
-          </div>
-      </div>
 
-      <div class="column fade-in">
-          <div class="slot">
-              <div class="container">
-                <select name= insurance_providers method="GET" action="/">
-                  {% for provider in insurance_providers %}
-                  <option value= "{{insurance_providers}}" SELECTED>{{provider}}</option>
-                  {% endfor %}
-                </select>
-              </div>
-          </div>
-      </div>
-  </div>
-  <div class="row">
+    <div class="name-section fade-in2">
+        <div class="row">
+  
+          
+            <div class="slotBigWhite">
+                <div class="container">
+                    <div class="column2 fade-in2">
+                        <div class="slotTransparentLeft">
+                            <div class="container">
+                                <p style="font-size: 21px">Health Institution Type</p>
+                                <select style="font-size: 21px; width: 450px" name= health_institutions method="GET" action="/">
+                                    {% for institution in health_institutions %}
+                                    <option value= "{{health_institutions}}">{{institution}}</option>
+                                    {% if 'Any' in insurance_providers %}
+                                    <option value= "{{health_institutions}}" SELECTED>{{institution}}</option>
+                                    {% endif %}
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="column2 fade-in2">
+                        <div class="slotTransparentRight">
+                            <div class="container">
+                                <p style="font-size: 21px">Insurance Provider</p>
+                                <select style="font-size: 21px; width: 450px" name= insurance_providers method="GET" action="/">
+                                    {% for provider in insurance_providers %}
+                                        <option value= "{{insurance_providers}}">{{provider}}</option>
+                                    {% if 'Any' in insurance_providers %}
+                                        <option value= "{{insurance_providers}}" SELECTED>{{provider}}</option>
+                                    {% endif %}
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
 
-    <h1 style="font-family: 'Montserrat';text-align:center;color: white">The Team</h1>
-    <div class="column fade-in">
-        <div class="slot">
-            <div class="container">
-                <h2 style="font-family: 'Montserrat'">Zachary Siegel</h2>
-                <p style="font-family: 'Montserrat'">siegelzc@utexas.edu</p>
+                    <div class="column3 fade-in2">
+                        <div class="slotTransparentLeft">
+                            <div class="container">
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="column3 fade-in2">
+                        <a style="font-family: 'Montserrat'; text-decoration:none" class="gradient-button gradient-button-1" href="#map">Search</a><br />
+                        
+                    </div>
+        
+                    <div class="column3 fade-in2">
+                        <div class="slotTransparentRight">
+                            <div class="container">
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="column fade-in2">
-        <div class="slot">
-            <div class="container">
-                <h2 style="font-family: 'Montserrat'">James Dong</h2>
-                <p style="font-family: 'Montserrat'">jamesjd210@utexas.edu</p>
-            </div>
-        </div>
-    </div>
+        <div class="row">
 
-    <div class="column fade-in3">
-        <div class="slot">
-            <div class="container">
-                <h2 style="font-family: 'Montserrat'">Ashray Desai</h2>
-                <p style="font-family: 'Montserrat'">ashraydesai@utexas.edu</p>
-            </div>
+
+
         </div>
+
+
     </div>
+  
 
 </div>
     <br>
     <!-- Map --->
-    <div>
-      <button class="btn colored">View</button>
+
+    <div id="map">
+        <div class="under">
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+            <div class="particle under"></div>
+        </div>
+
     </div>
-    <div id="map"></div>
+
+
 
     <script src="../static/dist/main.js"></script>
   </body>
