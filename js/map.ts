@@ -44,12 +44,16 @@ new Marker([51.5, -0.09], {icon: greenIcon}).addTo(map).bindPopup("Yo!");
 
 const newIcon = new Icon({
     iconUrl: '../static/images/Medview_logo_green.png',
-    iconSize:     [38, 95], // size of the icon
+    iconSize:     [38, 65], // size of the icon
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 });
 
-new Marker([51.5, -0.09], {icon: newIcon}).addTo(map);
+new Marker([30.26, -97.75], {icon: newIcon}).addTo(map).bindPopup("Badea: Luana G.: DDS \nDental Office\n9600 South IH 35 Service Road SB Bldg. 5 - Suite 275Austin: TX 78748 ");
+new Marker([30.27, -97.73], {icon: newIcon}).addTo(map).bindPopup("Barnes: John Steven: DDS \nDental Office\n8300 FM 620 North Building G Suite 100Austin: TX 78726");
+new Marker([30.25, -97.72], {icon: newIcon}).addTo(map).bindPopup("Benavides: Roberto Adrian: DDS \nDental Office\n8300 FM 620 North Building G Suite 100Austin: TX 78726 ");
+new Marker([30.255, -97.74], {icon: newIcon}).addTo(map).bindPopup("Calderon: Gwendolyn: DDS \nDental Office\n9600 South IH 35 Service Road SB Bldg. 5 - Suite 275Austin: TX 78748  ");
+new Marker([30.24, -97.76], {icon: newIcon}).addTo(map).bindPopup("Candelario: Ivan: DMD \nDental Office\n18801 Limestone Commercial Drive Suite 400Pflugerville: TX 78660 ");
 
 /*
 ASSUME THAT:

@@ -1,4 +1,4 @@
-import map, { initMarkers } from './map'
+import map from './map'
 
 const submit : HTMLElement = document.getElementsByClassName("gradient-button-1")[0] as HTMLElement
 submit.onclick = function() {
@@ -15,7 +15,7 @@ submit.onclick = function() {
     const xhr = new XMLHttpRequest()
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            initMarkers(JSON.parse(this.response));
+            //initMarkers(JSON.parse(this.response));
         }
     }
     xhr.open("GET", uri, true)
