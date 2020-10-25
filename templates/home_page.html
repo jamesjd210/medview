@@ -2,11 +2,23 @@
 <html>
   <!-- HEAD -->
   <head>
-    <h3>MedView</h3>
+    <script src="../dist/main.js"></script>
+    <h2>MedView</h2>
   </head>
   <!-- BODY -->
   <body>
-    <!-- Text entry field-->
-    <!-- Go! button-->    
+    <!-- Drop down entry field-->
+    <form method="POST">
+        <input name="Your Healthcare Insurance Provider">
+        <input type="Go!">
+      </form>
+    <!-- Text entry field and Go! button-->    
+    <select name= health_insurance method="GET" action="/">
+        {% for health_insurance in health_insurance %}
+        <option value= "{{health_insurance}}" SELECTED>{{health_insurance}}</option>"
+        {% endfor %}
+    </select>
+    <!-- Map --->
+    <div id="map"></div>
   </body>
 </html>
