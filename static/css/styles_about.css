@@ -6,6 +6,38 @@
     animation: gradient 15s ease infinite;
   }
 
+  .btn {
+    border: 2px solid black;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .back {
+    border-color: white;
+    color: white;
+  }
+
+  .back:hover {
+    background-color: white;
+    color: black;
+  }
+
+  /* Green */
+  .success {
+    border-color: #4CAF50;
+    color: green;
+  }
+  
+  .success:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+
   @keyframes gradient {
     0% {
         background-position: 0% 50%;
