@@ -93,15 +93,16 @@
                 <div class="container">
                     <div class="column2 fade-in2">
                         <div class="slotTransparentLeft">
-                            <div class="container">
+                            <div data-dropup-auto="false" class="container">
                                 <p style="font-size: 21px">Health Institution Type</p>
                                 <select style="font-size: 21px; width: 450px" name= health_institutions method="GET" action="/">
                                     {% for institution in health_institutions %}
-                                    <option value= "{{health_institutions}}">{{institution}}</option>
-                                    {% if 'Any' in insurance_providers %}
+                                    {% if 'Any' == institution %}
                                     <option value= "{{health_institutions}}" SELECTED>{{institution}}</option>
+                                    {% else %}
+                                    <option value= "{{health_institutions}}">{{institution}}</option>
                                     {% endif %}
-                                    {% endfor %}
+                                    {% endfor %}s
                                 </select>
                             </div>
                         </div>
@@ -109,13 +110,14 @@
             
                     <div class="column2 fade-in2">
                         <div class="slotTransparentRight">
-                            <div class="container">
+                            <div data-dropup-auto="false" class="container">
                                 <p style="font-size: 21px">Insurance Provider</p>
                                 <select style="font-size: 21px; width: 450px" name= insurance_providers method="GET" action="/">
                                     {% for provider in insurance_providers %}
-                                        <option value= "{{insurance_providers}}">{{provider}}</option>
-                                    {% if 'Any' in insurance_providers %}
-                                        <option value= "{{insurance_providers}}" SELECTED>{{provider}}</option>
+                                    {% if 'Any' == provider %}
+                                    <option value= "{{insurance_providers}}" SELECTED>{{provider}}</option>
+                                    {% else %}
+                                    <option value= "{{insurance_providers}}">{{provider}}</option>
                                     {% endif %}
                                     {% endfor %}
                                 </select>
