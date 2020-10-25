@@ -2,7 +2,7 @@ institution_types = [
     'Any',
     'Hospital',
     'Dentistry',
-    'Primary Care Clinic',
+    'Primary Care Clinic         ',
     'Urgent Care Clinic',
     'Convenience Clinic',
     'Imaging Center',
