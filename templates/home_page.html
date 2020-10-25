@@ -9,13 +9,13 @@
     <!-- Drop down entry field-->
     <select name= insurance_providers method="GET" action="/">
       {% for provider in insurance_providers %}
-      <option value= "{{provider}}" SELECTED>{{insurance_providers}}</option>
+      <option value= "{{insurance_providers}}" SELECTED>{{provider}}</option>
       {% endfor %}
     </select>
     <br>
     <select name= health_institutions method="GET" action="/">
         {% for institution in health_institutions %}
-        <option value= "{{institution}}" SELECTED>{{health_institutions}}</option>
+        <option value= "{{health_institutions}}" SELECTED>{{institution}}</option>
         {% endfor %}
     </select>
     <!-- Map --->
