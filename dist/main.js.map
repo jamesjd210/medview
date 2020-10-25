@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://medview/./js/index.js"],"names":["document","getElementById"],"mappings":"mBAEgBA,SAASC,eAAe,Q","file":"main.js","sourcesContent":["import { map } from './map'\n\nconst map_div = document.getElementById('map')\n"],"sourceRoot":""}

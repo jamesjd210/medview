@@ -1,4 +1,4 @@
 #!/bin/bash
 pip install -r $VIRTUAL_ENV/requirements.txt
 pip install -r $VIRTUAL_ENV/requirements-test.txt
-
+npm install

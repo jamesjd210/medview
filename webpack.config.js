@@ -5,7 +5,7 @@ module.exports = {
     entry: './js/index.ts',
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'static/dist'),
     },
     module: {
         rules: [
@@ -19,6 +19,6 @@ module.exports = {
     resolve: {
         extensions: [ '.tsx', '.ts', '.js' ],
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     context: path.resolve(__dirname, ''),
 }
