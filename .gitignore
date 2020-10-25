@@ -9,3 +9,8 @@ test/__pycache__/
 __pycache__/
 .pytest_cache/
 
+node_modules/
+package-lock.json
+
+static/dist/
+
