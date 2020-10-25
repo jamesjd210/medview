@@ -3,6 +3,12 @@
   <!-- HEAD -->
   <head>
     <h2>MedView</h2>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
   </head>
   <!-- BODY -->
   <body id="body">
@@ -22,9 +28,11 @@
         <option value= "{{health_institution}}" SELECTED>{{health_institution}}</option>
         {% endfor %}
     </select>
+
     <!-- Map --->
     <div id="map"></div>
 
+    <!-- Load JavaScript -->
     <script src="../static/dist/main.js"></script>
   </body>
 </html>

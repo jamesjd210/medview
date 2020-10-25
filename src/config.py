@@ -1,5 +1,5 @@
 provider_types = [
-    'All',
+    'Any',
     'Hospital',
     'Dentistry',
     'Primary Care Clinic',
