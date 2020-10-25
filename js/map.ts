@@ -25,18 +25,6 @@ const map = new LeafletMap('map', {
 }).setView(austin, 13)
 map.invalidateSize()
 
-/**
- * Signal to generate markers on the map
- * @param data {
- *      name: string,
- *      address: string,
- *      institution_type: string,
- *  }
- */
-export function initMarkers(data) {
-
-}
-
 // Icon classes declaration
 const greenIcon = new Icon({
     iconUrl: '../static/images/Medview_logo_green.png',
@@ -50,6 +38,9 @@ const blueIcon = new Icon({
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
 })
+
+//testmapfeatures
+new Marker([51.5, -0.09], {icon: greenIcon}).addTo(map).bindPopup("Yo!");
 
 /*
 ASSUME THAT:
@@ -77,12 +68,40 @@ const info = new Array; // This should be an array of Institution objects
 const name_insurer = ""; // Generated through drop-downs on home page
 const type_institution = "";// Generated through drop-downs on home page
 
+
+/**
+ * Signal to generate markers on the map
+ * @param data {
+ *      name: string,
+ *      address: string,
+ *      institution_type: string,
+ *  }
+ */
+/*
+export function initMarkers(data) {
+    const api_key = 'AIzaSyDqO6SLsNiiSggPDPpuQOq24oLGMhXmQqM';
+    const api_input = data.address.replace(' ', '+')
+    const uri = `https://maps.googleapis.com/maps/api/place/findplacefromtext/json?${api_key}&${api_input}&textquery`
+    const xhr = new XMLHttpRequest()
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            createMarker(JSON.parse(this.response).candidates[0].geometry.location); // { lat: Number, lng: Number }
+        }
+    }
+    xhr.open("GET", uri, true)
+    xhr.send()
+}
+*/
+
+
+
 // MAP LOGIC
 /* 
 Marker should be:
   - Green if location's list of supported insurances includes the provided one (insurance dropdown != any and location supports insurance)
   - Blue otherwise
 */ 
+/*
 for (let index = 0; index < info.length; index++) {
     let inst = info[index];
     // logic for placing one icon 
@@ -94,5 +113,5 @@ for (let index = 0; index < info.length; index++) {
         }
     }
 }
-
+*/
 export default map
