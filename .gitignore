@@ -15,4 +15,6 @@ package-lock.json
 static/dist/
 
 db/seed.csv
+db/seed.py
+db/query.sql
 

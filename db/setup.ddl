@@ -13,7 +13,7 @@ CREATE TYPE Provider_Enum AS ENUM (
 
 CREATE TABLE Providers (
     name VARCHAR(255) NOT NULL UNIQUE,
-    address VARCHAR(255) NOT NULL UNIQUE,
+    address VARCHAR(255) NOT NULL,
     type Provider_Enum NOT NULL,
     open_time TIME WITH TIME ZONE,
     close_time TIME WITH TIME ZONE,
