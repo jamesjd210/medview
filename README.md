@@ -7,6 +7,6 @@
  - `virtualenv .`
  - `source bin/activate`
  - `./installdeps`
- - Run server locally: `python3 main.py`
- - Run tests: `pytest`
-
+ - Run server locally: `npm start` or `python3 main.py`
+ - Run python tests: `pytest`
+ - Build JavaScript: `npm run build`
