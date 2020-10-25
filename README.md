@@ -5,6 +5,7 @@
  - `sudo apt install python3-virtualenv`
  - `sudo apt install nodejs`
  - `sudo apt install npm`
+ - `sudo apt install libpq-dev`
  - Change working directory to repo folder
  - `virtualenv .`
  - `source bin/activate`
