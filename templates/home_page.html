@@ -7,13 +7,15 @@
   <!-- BODY -->
   <body id="body">
     <!-- Drop down entry field-->
-    <form method="POST">
-      <input name="Your Healthcare Insurance Provider">
-      <input type="Go!">
-    </form>
-    <select name= health_institution method="GET" action="/">
-        {% for health_institution in health_institution %}
-        <option value= "{{health_institution}}" SELECTED>{{health_institution}}</option>
+    <select name= insurance_providers method="GET" action="/">
+      {% for provider in insurance_providers %}
+      <option value= "{{provider}}" SELECTED>{{insurance_providers}}</option>
+      {% endfor %}
+    </select>
+    <br>
+    <select name= health_institutions method="GET" action="/">
+        {% for institution in health_institutions %}
+        <option value= "{{institution}}" SELECTED>{{health_institutions}}</option>
         {% endfor %}
     </select>
     <!-- Map --->
