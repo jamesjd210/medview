@@ -1,5 +1,5 @@
-institution_types = [
-    'All',
+provider_types = [
+    'Any',
     'Hospital',
     'Dentistry',
     'Primary Care Clinic',
