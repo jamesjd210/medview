@@ -1,7 +1,9 @@
-import {
+                                                        import {
     Map as LeafletMap,
     TileLayer,
     LatLng,
+    Icon,
+    Marker
 } from 'leaflet'
 
 const austin = new LatLng(70, -90)
@@ -22,4 +24,61 @@ const map = new LeafletMap('map', {
 }).setView([90, -70], 13)
 map.invalidateSize();
 
+// Icon classes declaration
+const greenIcon = new Icon({
+    iconUrl: '../static/images/Medview_logo_green.png',
+    iconSize:     [38, 95], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+const blueIcon = new Icon({
+    iconUrl: '../static/images/Medview_logo_blue.png',
+    iconSize:     [38, 95], // size of the icon
+    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+    popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+});
+
+/*
+ASSUME THAT:
+'info' is an array of size 4, such that:
+  name = institution name
+  type = institution type
+  location = institution location
+  insurance = does it take given insurance? (automatically no if nothing sent // marker color indicates this too)
+These four pieces of information make up the pop up for each marker
+*/
+class Institution {
+    name: String;
+    type: String;
+    location: String;
+    insurance: Boolean;
+    constructor(name, type, location, insurance) {
+      this.name = name;
+      this.type = type;
+      this.location = location;
+      this.insurance = insurance;
+    }
+}
+// Main variables
+const info = new Array; // This should be an array of Institution objects
+const name_insurer = ""; // Generated through drop-downs on home page
+const type_institution = "";// Generated through drop-downs on home page
+
+// MAP LOGIC
+/* 
+Marker should be:
+  - Green if location's list of supported insurances includes the provided one (insurance dropdown != any and location supports insurance)
+  - Blue otherwise
+*/ 
+for(let index = 0; index < info.length; index++) {
+    let inst = info[index];
+    // logic for placing one icon 
+    if(inst.name === name_insurer){
+        if(inst.insurance === true){
+            new Marker([51.5, -0.09], {icon: greenIcon}).addTo(map).bindPopup(`${inst.name}:\n${inst.type}\n${inst.location}\nAccepts ${name_insurer}`);
+        }else{
+            new Marker([51.5, -0.09], {icon: blueIcon}).addTo(map).bindPopup(`${inst.name}:\n${inst.type}\n${inst.location}\nDoes not accept ${name_insurer}`);
+        }
+    }
+}
 export default map;
