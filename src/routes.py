@@ -3,9 +3,8 @@ from wtforms import Form, BooleanField, StringField, PasswordField, validators
 from flask import Flask, render_template, request
 
 from . import app
+from .config import provider_types
 
 @app.route('/', methods=['GET'])
 def home_page():
-    health_institution = ['All', 'Hospital', 'Dentistry', 'Primary Care Clinic', 'Urgent Care Clinic', 'Convenience Clinic', 'Imaging Center',
-    'Laboratory', 'Supplier', 'Specialty Center', 'Other']
-    return render_template('home_page.html', health_institution=health_institution)
+    return render_template('home_page.html', health_institution=provider_types)
