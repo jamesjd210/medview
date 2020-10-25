@@ -1,4 +1,4 @@
-                                                        import {
+import {
     Map as LeafletMap,
     TileLayer,
     LatLng,
@@ -6,7 +6,7 @@
     Marker
 } from 'leaflet'
 
-const austin = new LatLng(70, -90)
+const austin = new LatLng(30.26, -97.74)
 
 const streets = new TileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -21,7 +21,8 @@ const streets = new TileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{
 const map = new LeafletMap('map', {
     worldCopyJump: true,
     layers: [streets],
-}).setView([90, -70], 13)
+    center: austin
+}).setView(austin, 13)
 map.invalidateSize();
 
 // Icon classes declaration

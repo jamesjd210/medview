@@ -95,7 +95,7 @@
                         <div class="slotTransparentLeft">
                             <div data-dropup-auto="false" class="container">
                                 <p style="font-size: 21px">Health Institution Type</p>
-                                <select style="font-size: 21px; width: 450px" name= health_institutions method="GET" action="/">
+                                <select id="institutionSelect" style="font-size: 21px; width: 450px" name= health_institutions method="GET" action="/">
                                     {% for institution in health_institutions %}
                                     {% if 'Any' == institution %}
                                     <option value= "{{health_institutions}}" SELECTED>{{institution}}</option>
@@ -112,7 +112,7 @@
                         <div class="slotTransparentRight">
                             <div data-dropup-auto="false" class="container">
                                 <p style="font-size: 21px">Insurance Provider</p>
-                                <select style="font-size: 21px; width: 450px" name= insurance_providers method="GET" action="/">
+                                <select id="insuranceSelect" style="font-size: 21px; width: 450px" name= insurance_providers method="GET" action="/">
                                     {% for provider in insurance_providers %}
                                     {% if 'Any' == provider %}
                                     <option value= "{{insurance_providers}}" SELECTED>{{provider}}</option>
@@ -163,41 +163,32 @@
     <br>
     <!-- Map --->
 
-    <div id="map">
-        <div class="under">
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-            <div class="particle under"></div>
-        </div>
+    
+    <div id="center-div">
+        <div id="map">
 
+
+        </div>
     </div>
+
+    <div class="button-section fade-in2">
+        <div class="row">
+
+            <div class="columnBot fade-in5">
+            </div>
+
+            <div class="columnBot fade-in5">
+                <a href=#top><button style="font-family: 'Montserrat'" class="btn about">Top</button></a>
+            </div>
+            
+            <div class="columnBot fade-in5">
+            </div>
+
+        </div>
+    </div>
+        
+   
+
 
 
 
