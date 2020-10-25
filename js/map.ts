@@ -23,7 +23,19 @@ const map = new LeafletMap('map', {
     layers: [streets],
     center: austin
 }).setView(austin, 13)
-map.invalidateSize();
+map.invalidateSize()
+
+/**
+ * Signal to generate markers on the map
+ * @param data {
+ *      name: string,
+ *      address: string,
+ *      institution_type: string,
+ *  }
+ */
+export function initMarkers(data) {
+
+}
 
 // Icon classes declaration
 const greenIcon = new Icon({
@@ -31,13 +43,13 @@ const greenIcon = new Icon({
     iconSize:     [38, 95], // size of the icon
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
+})
 const blueIcon = new Icon({
     iconUrl: '../static/images/Medview_logo_blue.png',
     iconSize:     [38, 95], // size of the icon
     iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
     popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
-});
+})
 
 /*
 ASSUME THAT:
@@ -71,15 +83,16 @@ Marker should be:
   - Green if location's list of supported insurances includes the provided one (insurance dropdown != any and location supports insurance)
   - Blue otherwise
 */ 
-for(let index = 0; index < info.length; index++) {
+for (let index = 0; index < info.length; index++) {
     let inst = info[index];
     // logic for placing one icon 
-    if(inst.name === name_insurer){
-        if(inst.insurance === true){
+    if (inst.name === name_insurer) {
+        if (inst.insurance === true) {
             new Marker([51.5, -0.09], {icon: greenIcon}).addTo(map).bindPopup(`${inst.name}:\n${inst.type}\n${inst.location}\nAccepts ${name_insurer}`);
-        }else{
+        } else {
             new Marker([51.5, -0.09], {icon: blueIcon}).addTo(map).bindPopup(`${inst.name}:\n${inst.type}\n${inst.location}\nDoes not accept ${name_insurer}`);
         }
     }
 }
-export default map;
+
+export default map

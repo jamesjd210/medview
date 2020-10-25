@@ -19,3 +19,8 @@ insurer_types = [
     'Aetna Open Choice PPO',
     'Other'
 ]
+
+PGHOST : str ='104.154.251.225'
+PGDATABASE : str ='postgres'
+PGUSER : str ='postgres'
+PGPASSWORD : str ='goober'

@@ -58,3 +58,15 @@ CREATE TABLE Plans (
     FOREIGN KEY (fk_insurer) REFERENCES Insurers(pk_insurers),
     PRIMARY KEY (pk_plans)
 );
+
+-- Equijoin Providers and Insurers across the association class
+CREATE VIEW Providers_Insurers AS (
+    SELECT Providers.name AS Provider, Insurer,
+        Providers.pk_providers AS pk_provider, Accepted_Insurance.pk_insurers
+    FROM Providers, (
+        SELECT Insurers.name AS Insurer, Acceptance.fk_provider, Insurers.pk_insurers
+        FROM Insurers, Acceptance
+        WHERE Insurers.pk_insurers = Acceptance.fk_insurer
+    ) AS Accepted_Insurance
+    WHERE Providers.pk_providers = Accepted_Insurance.fk_provider
+);
