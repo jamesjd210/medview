@@ -4,7 +4,7 @@
     margin-left: 4.5%;
     margin-bottom: 45px;
     z-index: 1;
-   
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2);
 }
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Helvetica, sans-serif;
