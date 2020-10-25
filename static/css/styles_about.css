@@ -27,17 +27,6 @@
     color: black;
   }
 
-  /* Green */
-  .success {
-    border-color: #4CAF50;
-    color: green;
-  }
-  
-  .success:hover {
-    background-color: #4CAF50;
-    color: white;
-  }
-
   @keyframes gradient {
     0% {
         background-position: 0% 50%;
