@@ -15,3 +15,8 @@
  - Run python tests: `pytest`
  - Build JavaScript: `npm run build`
  - Start Server: `npm start` or `python3 main.py`
+ 
+ ## Previews
+ <img src="static/images/medviewpic1.PNG"/>
+ <img src="static/images/medviewpic2.PNG"/>
+ <img src="static/images/medviewpic3.PNG"/>
