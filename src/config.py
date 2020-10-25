@@ -1,4 +1,4 @@
-provider_types = [
+institution_types = [
     'Any',
     'Hospital',
     'Dentistry',
@@ -11,10 +11,11 @@ provider_types = [
     'Specialty Center',
     'Other'
 ]
-provider_types = [
+
+insurer_types = [
+    'Any',
     'United Healthcare',
     'BlueCross BlueShield PPO/EPO',
     'Aetna Open Choice PPO',
     'Other'
 ]
-
