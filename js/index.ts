@@ -22,5 +22,3 @@ submit.onclick = function() {
     xhr.send()
 }
 
-console.log(map)
-
